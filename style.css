@@ -65,8 +65,15 @@ body {
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;   /* fills the whole screen height */
-  /* a dark, elegant gradient (we'll add a real photo in a later commit) */
-  background: linear-gradient(135deg, #2b2b38 0%, #1c1c24 100%);
+  /* real hero photo with a dark overlay so the white text stays readable.
+     (falls back to the dark colour if the image is missing) */
+  background-color: var(--dark);
+  background-image:
+    linear-gradient(rgba(28, 28, 36, 0.65), rgba(28, 28, 36, 0.85)),
+    url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,11 +193,11 @@ body {
   box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
-/* coloured "photo" areas (we'll swap these for real images later) */
-.room-img { height: 190px; }
-.room-img-1 { background: linear-gradient(135deg, #c9a24b, #8a6d2f); }
-.room-img-2 { background: linear-gradient(135deg, #4b7b80, #2b4a4e); }
-.room-img-3 { background: linear-gradient(135deg, #6b4b80, #3a2a4e); }
+/* real room photos */
+.room-img { height: 190px; background-size: cover; background-position: center; }
+.room-img-1 { background-image: url('images/room1.jpg'); }
+.room-img-2 { background-image: url('images/room2.jpg'); }
+.room-img-3 { background-image: url('images/room3.jpg'); }
 
 .room-info { padding: 24px; }
 .room-info h3 { font-size: 22px; margin-bottom: 10px; }
@@ -239,6 +246,8 @@ body {
   align-items: flex-end;   /* pushes the caption to the bottom */
   cursor: pointer;
   transition: transform 0.3s;
+  background-size: cover;
+  background-position: center;
 }
 .gallery-item:hover { transform: scale(1.03); }
 
@@ -252,13 +261,13 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* coloured placeholder "photos" (swap for real images in a later commit) */
-.g1 { background: linear-gradient(135deg, #3a7bd5, #00d2ff); }
-.g2 { background: linear-gradient(135deg, #c9a24b, #e0793d); }
-.g3 { background: linear-gradient(135deg, #38a169, #1e7a4d); }
-.g4 { background: linear-gradient(135deg, #6b4b80, #b06ab3); }
-.g5 { background: linear-gradient(135deg, #4b7b80, #2b4a4e); }
-.g6 { background: linear-gradient(135deg, #833ab4, #fd1d1d); }
+/* real gallery photos */
+.g1 { background-image: url('images/pool.jpg'); }
+.g2 { background-image: url('images/restaurant.jpg'); }
+.g3 { background-image: url('images/garden.jpg'); }
+.g4 { background-image: url('images/lobby.jpg'); }
+.g5 { background-image: url('images/spa.jpg'); }
+.g6 { background-image: url('images/bar.jpg'); }
 
 /* ===== CONTACT SECTION ===== */
 .contact {
