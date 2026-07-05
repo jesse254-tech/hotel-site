@@ -99,6 +99,40 @@ body {
   font-size: 14px;
 }
 
+/* ===== ABOUT SECTION ===== */
+.about {
+  background: #fff;
+  padding: 80px 40px;
+}
+
+.about-wrap {
+  display: flex;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;   /* columns stack on small screens */
+}
+
+.about-text { flex: 1 1 400px; }
+.about-text h2 { font-size: 36px; color: var(--dark); margin-bottom: 20px; }
+.about-text p  { color: #666; font-size: 16px; margin-bottom: 16px; }
+
+.about-stats {
+  flex: 1 1 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* two stat boxes per row */
+  gap: 20px;
+}
+.stat {
+  background: var(--light);
+  padding: 26px;
+  border-radius: 8px;
+  text-align: center;
+}
+.stat h3 { font-size: 34px; color: var(--gold); margin-bottom: 6px; }
+.stat span { color: #777; font-size: 14px; }
+
 /* ===== ROOMS SECTION ===== */
 .rooms {
   background: var(--light);
@@ -260,6 +294,8 @@ body {
   .hero-text p  { font-size: 16px; }
   .navbar { flex-direction: column; gap: 12px; padding: 16px; }
   .navbar nav a { margin: 0 12px; }
+  .about { padding: 50px 20px; }
+  .about-text h2 { font-size: 28px; }
   .rooms { padding: 50px 20px; }
   .gallery { padding: 50px 20px; }
   .contact { padding: 50px 20px; }
