@@ -1,0 +1,108 @@
+/* ===== COLOUR PALETTE (change these once, they update everywhere) ===== */
+:root {
+  --gold: #c9a24b;      /* warm hotel gold */
+  --dark: #1c1c24;      /* deep charcoal */
+  --light: #f7f5f0;     /* soft cream */
+}
+
+/* ===== BASIC RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: absolute;      /* sits on top of the hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;  /* logo left, menu right */
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.logo span { color: var(--gold); }   /* the "Hotel" part in gold */
+
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.navbar nav a:hover { color: var(--gold); }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;   /* fills the whole screen height */
+  /* a dark, elegant gradient (we'll add a real photo in a later commit) */
+  background: linear-gradient(135deg, #2b2b38 0%, #1c1c24 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  color: #ddd;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--dark);
+  padding: 14px 34px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.2s, background 0.3s;
+}
+.btn:hover {
+  background: #d8b662;   /* slightly lighter gold on hover */
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--dark);
+  color: #aaa;
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+}
+
+/* ===== MOBILE (screens under 600px) ===== */
+@media (max-width: 600px) {
+  .hero-text h1 { font-size: 34px; }
+  .hero-text p  { font-size: 16px; }
+  .navbar { flex-direction: column; gap: 12px; padding: 16px; }
+  .navbar nav a { margin: 0 12px; }
+}
