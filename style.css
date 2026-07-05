@@ -1,18 +1,17 @@
-/* ===== COLOUR PALETTE (change these once, they update everywhere) ===== */
+/* Variables */
 :root {
-  --gold: #c9a24b;      /* warm hotel gold */
-  --dark: #1c1c24;      /* deep charcoal */
-  --light: #f7f5f0;     /* soft cream */
+  --gold: #c9a24b;
+  --dark: #1c1c24;
+  --light: #f7f5f0;
 }
 
-/* ===== BASIC RESET ===== */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Smooth glide when clicking navbar links (instead of an instant jump) */
 html { scroll-behavior: smooth; }
 
 body {
@@ -21,14 +20,14 @@ body {
   line-height: 1.6;
 }
 
-/* ===== NAVBAR ===== */
+/* Navbar */
 .navbar {
-  position: absolute;      /* sits on top of the hero */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;  /* logo left, menu right */
+  justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   z-index: 10;
@@ -40,7 +39,7 @@ body {
   color: #fff;
   letter-spacing: 1px;
 }
-.logo span { color: var(--gold); }   /* the "Hotel" part in gold */
+.logo span { color: var(--gold); }
 
 .navbar nav a {
   color: #fff;
@@ -51,7 +50,6 @@ body {
 }
 .navbar nav a:hover { color: var(--gold); }
 
-/* Hamburger button — hidden on desktop, appears only on mobile */
 .hamburger {
   display: none;
   background: none;
@@ -62,11 +60,9 @@ body {
   line-height: 1;
 }
 
-/* ===== HERO ===== */
+/* Hero */
 .hero {
-  min-height: 100vh;   /* fills the whole screen height */
-  /* real hero photo with a dark overlay so the white text stays readable.
-     (falls back to the dark colour if the image is missing) */
+  min-height: 100vh;
   background-color: var(--dark);
   background-image:
     linear-gradient(rgba(28, 28, 36, 0.65), rgba(28, 28, 36, 0.85)),
@@ -94,7 +90,7 @@ body {
   color: #ddd;
 }
 
-/* ===== BUTTON ===== */
+/* Buttons */
 .btn {
   display: inline-block;
   background: var(--gold);
@@ -107,11 +103,11 @@ body {
   transition: transform 0.2s, background 0.3s;
 }
 .btn:hover {
-  background: #d8b662;   /* slightly lighter gold on hover */
+  background: #d8b662;
   transform: translateY(-2px);
 }
 
-/* ===== FOOTER ===== */
+/* Footer */
 .footer {
   background: var(--dark);
   color: #aaa;
@@ -120,7 +116,7 @@ body {
   font-size: 14px;
 }
 
-/* ===== ABOUT SECTION ===== */
+/* About */
 .about {
   background: #fff;
   padding: 80px 40px;
@@ -132,7 +128,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   align-items: center;
-  flex-wrap: wrap;   /* columns stack on small screens */
+  flex-wrap: wrap;
 }
 
 .about-text { flex: 1 1 400px; }
@@ -142,7 +138,7 @@ body {
 .about-stats {
   flex: 1 1 300px;
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* two stat boxes per row */
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 .stat {
@@ -154,7 +150,7 @@ body {
 .stat h3 { font-size: 34px; color: var(--gold); margin-bottom: 6px; }
 .stat span { color: #777; font-size: 14px; }
 
-/* ===== ROOMS SECTION ===== */
+/* Rooms */
 .rooms {
   background: var(--light);
   padding: 80px 40px;
@@ -171,29 +167,27 @@ body {
   margin-bottom: 50px;
 }
 
-/* the grid holds the room cards and wraps automatically */
 .room-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1100px;
-  margin: 0 auto;   /* centre the grid */
+  margin: 0 auto;
 }
 
 .room-card {
   background: #fff;
   border-radius: 8px;
-  overflow: hidden;                 /* keeps the image corners rounded */
+  overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   text-align: left;
   transition: transform 0.25s, box-shadow 0.25s;
 }
 .room-card:hover {
-  transform: translateY(-6px);       /* lifts up on hover */
+  transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
-/* real room photos */
 .room-img { height: 190px; background-size: cover; background-position: center; }
 .room-img-1 { background-image: url('images/room1.jpg'); }
 .room-img-2 { background-image: url('images/room2.jpg'); }
@@ -222,7 +216,7 @@ body {
 }
 .btn-small:hover { background: #d8b662; }
 
-/* ===== GALLERY SECTION ===== */
+/* Gallery */
 .gallery {
   background: #fff;
   padding: 80px 40px;
@@ -243,7 +237,7 @@ body {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;   /* pushes the caption to the bottom */
+  align-items: flex-end;
   cursor: pointer;
   transition: transform 0.3s;
   background-size: cover;
@@ -251,7 +245,6 @@ body {
 }
 .gallery-item:hover { transform: scale(1.03); }
 
-/* the caption bar at the bottom of each tile */
 .gallery-item span {
   width: 100%;
   background: rgba(0,0,0,0.45);
@@ -261,7 +254,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* real gallery photos */
 .g1 { background-image: url('images/pool.jpg'); }
 .g2 { background-image: url('images/restaurant.jpg'); }
 .g3 { background-image: url('images/garden.jpg'); }
@@ -269,7 +261,7 @@ body {
 .g5 { background-image: url('images/spa.jpg'); }
 .g6 { background-image: url('images/bar.jpg'); }
 
-/* ===== CONTACT SECTION ===== */
+/* Contact */
 .contact {
   background: var(--light);
   padding: 80px 40px;
@@ -282,7 +274,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   text-align: left;
-  flex-wrap: wrap;   /* stacks the two columns on small screens */
+  flex-wrap: wrap;
 }
 
 .contact-info, .contact-form { flex: 1 1 300px; }
@@ -297,12 +289,11 @@ body {
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-family: inherit;   /* match the site font */
+  font-family: inherit;
   font-size: 15px;
 }
 .contact-form textarea { resize: vertical; }
 
-/* make the <button> match our gold .btn look */
 .contact-form .btn {
   border: none;
   cursor: pointer;
@@ -311,35 +302,31 @@ body {
   width: 100%;
 }
 
-/* ===== MOBILE (screens under 600px) ===== */
+/* Responsive */
 @media (max-width: 600px) {
-
-  /* NAVBAR: solid bar with logo on the left and a hamburger on the right */
   .navbar {
-    position: static;          /* no longer floats over the hero */
-    background: var(--dark);   /* solid dark bar */
+    position: static;
+    background: var(--dark);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;           /* lets the open dropdown fall below */
+    flex-wrap: wrap;
     padding: 14px 20px;
   }
   .logo { font-size: 24px; }
-  .hamburger { display: block; }   /* show the button on mobile */
+  .hamburger { display: block; }
 
-  /* The menu is an ANIMATED DROPDOWN: it slides + fades open */
   .navbar nav {
-    display: flex;             /* always flex, just collapsed when closed */
-    flex-direction: column;    /* links stacked vertically */
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-height: 0;             /* collapsed = zero height */
-    overflow: hidden;          /* hide the links while collapsed */
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
     margin-top: 0;
-    /* these transitions create the smooth open/close animation */
     transition: max-height 0.35s ease, opacity 0.35s ease, margin-top 0.35s ease;
   }
-  .navbar nav.open {           /* JS adds .open → the menu expands smoothly */
+  .navbar nav.open {
     max-height: 400px;
     opacity: 1;
     margin-top: 12px;
@@ -348,27 +335,23 @@ body {
     margin: 0;
     padding: 12px 4px;
     font-size: 16px;
-    border-top: 1px solid rgba(255,255,255,0.12);   /* divider between links */
+    border-top: 1px solid rgba(255,255,255,0.12);
   }
 
-  /* HERO: a touch shorter now the bar sits above it, with breathing room */
   .hero { min-height: 78vh; padding: 40px 20px; }
   .hero-text h1 { font-size: 32px; }
   .hero-text p  { font-size: 16px; }
   .btn { padding: 12px 28px; }
 
-  /* SECTION HEADINGS */
   .section-title { font-size: 28px; }
   .section-subtitle { margin-bottom: 34px; }
 
-  /* ABOUT: tighter stats so two boxes still fit comfortably */
   .about { padding: 50px 20px; }
   .about-text h2 { font-size: 28px; }
   .about-stats { gap: 14px; }
   .stat { padding: 20px 12px; }
   .stat h3 { font-size: 28px; }
 
-  /* OTHER SECTIONS: comfortable phone padding */
   .rooms   { padding: 50px 20px; }
   .gallery { padding: 50px 20px; }
   .contact { padding: 50px 20px; }
