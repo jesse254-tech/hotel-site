@@ -212,6 +212,48 @@ body {
 .g5 { background: linear-gradient(135deg, #4b7b80, #2b4a4e); }
 .g6 { background: linear-gradient(135deg, #833ab4, #fd1d1d); }
 
+/* ===== CONTACT SECTION ===== */
+.contact {
+  background: var(--light);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.contact-wrap {
+  display: flex;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  flex-wrap: wrap;   /* stacks the two columns on small screens */
+}
+
+.contact-info, .contact-form { flex: 1 1 300px; }
+
+.contact-info h3 { font-size: 24px; margin-bottom: 16px; color: var(--dark); }
+.contact-info p  { color: #555; margin-bottom: 12px; font-size: 16px; }
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;   /* match the site font */
+  font-size: 15px;
+}
+.contact-form textarea { resize: vertical; }
+
+/* make the <button> match our gold .btn look */
+.contact-form .btn {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+  width: 100%;
+}
+
 /* ===== MOBILE (screens under 600px) ===== */
 @media (max-width: 600px) {
   .hero-text h1 { font-size: 34px; }
@@ -220,5 +262,7 @@ body {
   .navbar nav a { margin: 0 12px; }
   .rooms { padding: 50px 20px; }
   .gallery { padding: 50px 20px; }
+  .contact { padding: 50px 20px; }
+  .contact-wrap { gap: 30px; }
   .section-title { font-size: 30px; }
 }
