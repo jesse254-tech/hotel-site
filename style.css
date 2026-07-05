@@ -48,6 +48,17 @@ body {
 }
 .navbar nav a:hover { color: var(--gold); }
 
+/* Hamburger button — hidden on desktop, appears only on mobile */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;   /* fills the whole screen height */
@@ -291,22 +302,33 @@ body {
 /* ===== MOBILE (screens under 600px) ===== */
 @media (max-width: 600px) {
 
-  /* NAVBAR: turn the floating bar into a solid top bar so it never
-     overlaps the hero, and centre everything neatly. */
+  /* NAVBAR: solid bar with logo on the left and a hamburger on the right */
   .navbar {
     position: static;          /* no longer floats over the hero */
     background: var(--dark);   /* solid dark bar */
-    flex-direction: column;    /* logo on top, links below */
-    gap: 12px;
-    padding: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;           /* lets the open dropdown fall below */
+    padding: 14px 20px;
   }
   .logo { font-size: 24px; }
+  .hamburger { display: block; }   /* show the button on mobile */
+
+  /* The menu is a DROPDOWN: hidden until the hamburger is tapped */
   .navbar nav {
-    display: flex;
-    flex-wrap: wrap;           /* links wrap instead of overflowing */
-    justify-content: center;
+    display: none;             /* hidden by default */
+    width: 100%;               /* full width when it drops down */
+    flex-direction: column;    /* links stacked vertically */
+    margin-top: 12px;
   }
-  .navbar nav a { margin: 4px 10px; font-size: 15px; }
+  .navbar nav.open { display: flex; }   /* JS adds .open to reveal it */
+  .navbar nav a {
+    margin: 0;
+    padding: 12px 4px;
+    font-size: 16px;
+    border-top: 1px solid rgba(255,255,255,0.12);   /* divider between links */
+  }
 
   /* HERO: a touch shorter now the bar sits above it, with breathing room */
   .hero { min-height: 78vh; padding: 40px 20px; }
