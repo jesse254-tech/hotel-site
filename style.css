@@ -357,3 +357,16 @@ body {
   .contact { padding: 50px 20px; }
   .contact-wrap { gap: 30px; }
 }
+
+/* Amenities */
+.amenities {
+  background: var(--dark);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 50px;
+  padding: 40px 20px;
+}
+.amenity { text-align: center; color: #fff; min-width: 90px; }
+.amenity-ico { font-size: 30px; display: block; margin-bottom: 8px; }
+.amenity p { font-size: 14px; color: #ddd; letter-spacing: 0.3px; }
