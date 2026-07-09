@@ -6,9 +6,12 @@ A modern, responsive landing page for Amani Hotel & Suites — a boutique hotel 
 
 - Fully responsive across desktop, tablet, and mobile
 - Hero section with a background image and overlay
+- Amenities strip (Wi-Fi, pool, parking, restaurant, and more)
 - About section with the hotel story and key stats
 - Rooms showcase with photos, pricing, and hover effects
+- Special offers and packages
 - Photo gallery with captions and hover zoom
+- Guest testimonials
 - Contact section with details and an enquiry form
 - Animated mobile menu and smooth scrolling
 

@@ -370,3 +370,22 @@ body {
 .amenity { text-align: center; color: #fff; min-width: 90px; }
 .amenity-ico { font-size: 30px; display: block; margin-bottom: 8px; }
 .amenity p { font-size: 14px; color: #ddd; letter-spacing: 0.3px; }
+
+/* Offers */
+.offers { background: #fff; padding: 80px 40px; text-align: center; }
+.offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.offer-card { position: relative; background: var(--light); border-radius: 10px; padding: 40px 28px 28px; text-align: left; border: 1px solid #eee2cf; transition: transform 0.25s, box-shadow 0.25s; }
+.offer-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.1); }
+.offer-tag { position: absolute; top: 16px; right: 16px; background: var(--gold); color: var(--dark); font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; }
+.offer-card h3 { font-size: 22px; margin-bottom: 10px; }
+.offer-card p { color: #666; font-size: 15px; margin-bottom: 16px; }
+.offer-price { display: block; color: var(--gold); font-weight: bold; font-size: 18px; margin-bottom: 18px; }
+
+/* Testimonials */
+.testimonials { background: var(--light); padding: 80px 40px; text-align: center; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.testimonial-card { background: #fff; border-radius: 10px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); text-align: left; }
+.testimonial-card .quote { font-style: italic; color: #444; margin-bottom: 18px; }
+.testimonial-card .who strong { display: block; color: var(--dark); }
+.testimonial-card .who span { color: #999; font-size: 14px; }
+@media (max-width: 600px) { .offers, .testimonials { padding: 50px 20px; } }
